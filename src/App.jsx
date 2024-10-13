@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import General from "./pages/General";
 import Trauma from "./pages/Trauma";
 import ID from "./pages/ID";
+import Psych from "./pages/Psych";
 import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
             <Route index element={<General />} />
             <Route path="/trauma" element={<Trauma />} />
             <Route path="/id" element={<ID />} />
+            <Route path="/psych" element={<Psych />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}
