@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button"
 
-const NoteSection = ({ note, setNote }) => {
+const NoteSection = ({ note, setNote, onClear }) => {
   const handleClear = () => {
     setNote('');
+    onClear(); // This will be used to clear checkboxes in parent components
   };
 
   const handleCopy = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Column = ({ title, sections, onCheckboxChange }) => {
+const Column = ({ title, sections, onCheckboxChange, checkboxStates }) => {
   return (
     <div className="bg-gray-800 p-4 rounded">
       <h2 className="text-lg font-bold mb-4 text-emerald-400">{title}</h2>
@@ -13,6 +13,7 @@ const Column = ({ title, sections, onCheckboxChange }) => {
                 type="checkbox"
                 id={`${title}-${index}-${itemIndex}`}
                 className="mr-2 accent-emerald-400"
+                checked={checkboxStates[item] || false}
                 onChange={() => onCheckboxChange(item)}
               />
               <label htmlFor={`${title}-${index}-${itemIndex}`} className="text-sm">

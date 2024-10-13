@@ -4,9 +4,18 @@ import NoteSection from '../components/NoteSection';
 
 const General = () => {
   const [note, setNote] = useState('');
+  const [checkboxStates, setCheckboxStates] = useState({});
 
   const handleCheckboxChange = (text) => {
     setNote((prevNote) => prevNote + text + '\n');
+    setCheckboxStates((prevStates) => ({
+      ...prevStates,
+      [text]: !prevStates[text]
+    }));
+  };
+
+  const handleClear = () => {
+    setCheckboxStates({});
   };
 
   const columns = [
@@ -93,10 +102,11 @@ const General = () => {
             title={column.title}
             sections={column.sections}
             onCheckboxChange={handleCheckboxChange}
+            checkboxStates={checkboxStates}
           />
         ))}
       </div>
-      <NoteSection note={note} setNote={setNote} />
+      <NoteSection note={note} setNote={setNote} onClear={handleClear} />
     </div>
   );
 };
