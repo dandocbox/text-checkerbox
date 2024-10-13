@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import General from "./pages/General";
 import Trauma from "./pages/Trauma";
+import ID from "./pages/ID";
 import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
@@ -13,7 +14,6 @@ const tabs = [
   "Diagnosis-Specific",
   "ACLS",
   "Constitutional",
-  "ID / Infectious",
   "Neuro",
   "Eye",
   "HEENT",
@@ -38,6 +38,7 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<General />} />
             <Route path="/trauma" element={<Trauma />} />
+            <Route path="/id" element={<ID />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}
