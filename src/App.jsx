@@ -9,6 +9,7 @@ import ID from "./pages/ID";
 import Psych from "./pages/Psych";
 import ChestResp from "./pages/ChestResp";
 import Neuro from "./pages/Neuro";
+import Constitutional from "./pages/Constitutional";
 import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
@@ -16,7 +17,6 @@ const queryClient = new QueryClient();
 const tabs = [
   "Diagnosis-Specific",
   "ACLS",
-  "Constitutional",
   "Eye",
   "HEENT",
   "Abdo/GI",
@@ -42,6 +42,7 @@ const App = () => (
             <Route path="/psych" element={<Psych />} />
             <Route path="/chest-resp" element={<ChestResp />} />
             <Route path="/neuro" element={<Neuro />} />
+            <Route path="/constitutional" element={<Constitutional />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}
