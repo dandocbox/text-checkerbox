@@ -8,6 +8,7 @@ import Trauma from "./pages/Trauma";
 import ID from "./pages/ID";
 import Psych from "./pages/Psych";
 import ChestResp from "./pages/ChestResp";
+import Neuro from "./pages/Neuro";
 import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
@@ -16,17 +17,14 @@ const tabs = [
   "Diagnosis-Specific",
   "ACLS",
   "Constitutional",
-  "Neuro",
   "Eye",
   "HEENT",
-  "Chest/Resp",
   "Abdo/GI",
   "OB/GYN",
   "Genitourinary",
   "MSK",
   "Skin",
   "Allergy",
-  "Psych",
   "Environmental",
   "Misc"
 ];
@@ -43,6 +41,7 @@ const App = () => (
             <Route path="/id" element={<ID />} />
             <Route path="/psych" element={<Psych />} />
             <Route path="/chest-resp" element={<ChestResp />} />
+            <Route path="/neuro" element={<Neuro />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}
