@@ -4,8 +4,30 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import General from "./pages/General";
+import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
+
+const tabs = [
+  "Diagnosis-Specific",
+  "ACLS",
+  "Constitutional",
+  "ID / Infectious",
+  "Trauma / Burn",
+  "Neuro",
+  "Eye",
+  "HEENT",
+  "Chest/Resp",
+  "Abdo/GI",
+  "OB/GYN",
+  "Genitourinary",
+  "MSK",
+  "Skin",
+  "Allergy",
+  "Psych / ETOH / Drug",
+  "Wilderness Med",
+  "Misc"
+];
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -15,7 +37,13 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<General />} />
-            {/* Add more routes for other tabs here */}
+            {tabs.map((tab, index) => (
+              <Route
+                key={index}
+                path={`/${tab.toLowerCase().replace(/ /g, "-")}`}
+                element={<EmptyPage />}
+              />
+            ))}
           </Route>
         </Routes>
       </BrowserRouter>
