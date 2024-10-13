@@ -15,6 +15,7 @@ const General = () => {
   };
 
   const handleClear = () => {
+    setNote('');
     setCheckboxStates({});
   };
 
@@ -23,7 +24,7 @@ const General = () => {
       title: "CC",
       sections: [
         {
-          title: "History:",
+          title: "General:",
           items: ["History General"]
         }
       ]
@@ -32,33 +33,33 @@ const General = () => {
       title: "EXAM / PROCEDURES",
       sections: [
         {
-          title: "Procedures:",
-          items: [
-            "Procedure Laceration",
-            "Procedure Splint",
-            "Procedure Digital Block",
-            "Procedure Laceration Glue",
-            "Procedure Drainage",
-            "Procedure EFAST",
-            "Procedure General",
-            "Procedure Intubation",
-            "Procedure Suture Removal",
-            "Procedure Echo",
-            "Procedure Chest Tube Thoravent",
-            "Procedure Chest Tube Surgical",
-            "Procedure Sedation",
-            "Procedure Nasal Packing",
-            "Procedure Foreign Body Ear",
-            "Procedure Ortho Reduction"
-          ]
-        },
-        {
           title: "Exam:",
           items: [
             "Insert Exam",
             "Insert Exam Limited",
             "Insert Exam With Neuro",
             "Insert Exam With Eye"
+          ]
+        },
+        {
+          title: "Procedures:",
+          items: [
+            "Procedure Chest Tube Surgical",
+            "Procedure Chest Tube Thoravent",
+            "Procedure Digital Block",
+            "Procedure Drainage",
+            "Procedure Echo",
+            "Procedure EFAST",
+            "Procedure Foreign Body Ear",
+            "Procedure General",
+            "Procedure Intubation",
+            "Procedure Laceration",
+            "Procedure Laceration Glue",
+            "Procedure Nasal Packing",
+            "Procedure Ortho Reduction",
+            "Procedure Sedation",
+            "Procedure Splint",
+            "Procedure Suture Removal"
           ]
         }
       ]
@@ -71,25 +72,52 @@ const General = () => {
           items: ["MDM General"]
         },
         {
-          title: "Dispo:",
-          items: ["Discharge General", "Admit General"]
+          title: "Discharge:",
+          items: ["Discharge General"]
         },
         {
-          title: "MDM:",
-          items: [
-            "MDM Considered Admit",
-            "MDM Discussion Hospitalist",
-            "MDM Additional History",
-            "MDM Documentation Reviewed",
-            "MDM Social",
-            "MDM Discussion Ortho"
-          ]
+          title: "Admit:",
+          items: ["Admit General"]
         }
       ]
     },
     {
       title: "Extras",
-      sections: []
+      sections: [
+        {
+          title: "History/Chart Review:",
+          items: [
+            "MDM Additional History",
+            "MDM Documentation Reviewed"
+          ]
+        },
+        {
+          title: "Existing Conditions Affecting Care:",
+          items: ["MDM Chronic Conditions"]
+        },
+        {
+          title: "Social determinant of health:",
+          items: ["MDM Social"]
+        },
+        {
+          title: "Obs/Considered Admission:",
+          items: [
+            "MDM Considered Admit",
+            "MDM Observation"
+          ]
+        },
+        {
+          title: "Discussions:",
+          items: [
+            "MDM Discussion Hospitalist",
+            "MDM Discussion Ortho"
+          ]
+        },
+        {
+          title: "Critical Care:",
+          items: ["Insert Critical Care"]
+        }
+      ]
     }
   ];
 
