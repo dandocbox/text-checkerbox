@@ -25,7 +25,7 @@ const tabs = [
   "Skin",
   "Allergy",
   "Psych",
-  "Wilderness Med",
+  "Environmental",
   "Misc"
 ];
 
