@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import General from "./pages/General";
+import Trauma from "./pages/Trauma";
 import EmptyPage from "./components/EmptyPage";
 
 const queryClient = new QueryClient();
@@ -13,7 +14,6 @@ const tabs = [
   "ACLS",
   "Constitutional",
   "ID / Infectious",
-  "Trauma / Burn",
   "Neuro",
   "Eye",
   "HEENT",
@@ -37,6 +37,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<General />} />
+            <Route path="/trauma" element={<Trauma />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}

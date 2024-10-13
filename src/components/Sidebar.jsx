@@ -7,7 +7,7 @@ const tabs = [
   "ACLS",
   "Constitutional",
   "ID / Infectious",
-  "Trauma / Burn",
+  "Trauma",
   "Neuro",
   "Eye",
   "HEENT",
