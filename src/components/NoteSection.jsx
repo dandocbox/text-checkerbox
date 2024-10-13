@@ -18,18 +18,17 @@ const NoteSection = ({ note, setNote }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <Button
           variant="outline"
-          size="sm"
           onClick={handleClear}
-          className="bg-white text-black hover:bg-gray-200 font-semibold px-4 py-2 rounded"
+          className="bg-white text-black hover:bg-gray-200 font-semibold px-4 py-2 rounded h-10"
         >
           Clear
         </Button>
         <Button
           onClick={handleCopy}
-          className="bg-emerald-400 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded flex-grow ml-2"
+          className="bg-emerald-400 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded flex-grow ml-2 h-10"
         >
           Copy Text
         </Button>
