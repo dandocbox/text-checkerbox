@@ -11,18 +11,26 @@ const NoteSection = ({ note, setNote }) => {
   };
 
   return (
-    <div className="w-96 bg-gray-800 p-4 rounded">
-      <h2 className="text-lg font-bold mb-4 text-green-500">NOTE:</h2>
+    <div className="w-96 bg-gray-900 p-4 rounded-lg">
+      <h2 className="text-2xl font-bold mb-4 text-emerald-400">NOTE:</h2>
       <textarea
-        className="w-full h-96 bg-gray-700 text-white p-2 rounded mb-4"
+        className="w-full h-96 bg-gray-800 text-white p-2 rounded-lg mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-emerald-400"
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
       <div className="flex justify-between">
-        <Button variant="outline" size="sm" onClick={handleClear}>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleClear}
+          className="bg-white text-black hover:bg-gray-200 font-semibold px-4 py-2 rounded"
+        >
           Clear
         </Button>
-        <Button className="bg-green-500 hover:bg-green-600" onClick={handleCopy}>
+        <Button
+          onClick={handleCopy}
+          className="bg-emerald-400 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded flex-grow ml-2"
+        >
           Copy Text
         </Button>
       </div>

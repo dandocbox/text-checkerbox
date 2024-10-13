@@ -32,7 +32,7 @@ const Sidebar = () => {
           to={index === 0 ? "/" : `/${tab.toLowerCase().replace(/ /g, "-")}`}
           className={({ isActive }) =>
             `block py-2 px-4 mb-2 rounded ${
-              isActive ? "bg-green-500" : "hover:bg-gray-700"
+              isActive ? "bg-emerald-400 text-white" : "hover:bg-gray-700 text-white"
             }`
           }
         >
