@@ -11,13 +11,17 @@ const NoteSection = ({ note, setNote, onClear }) => {
     navigator.clipboard.writeText(note);
   };
 
+  const handleChange = (e) => {
+    setNote(e.target.value);
+  };
+
   return (
     <div className="w-96 bg-gray-900 p-4 rounded-lg">
       <h2 className="text-2xl font-bold mb-4 text-emerald-400">NOTE:</h2>
       <textarea
         className="w-full h-96 bg-gray-800 text-white p-2 rounded-lg mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-emerald-400"
         value={note}
-        onChange={(e) => setNote(e.target.value)}
+        onChange={handleChange}
       />
       <div className="flex justify-between items-center">
         <Button
