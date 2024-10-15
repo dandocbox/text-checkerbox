@@ -11,6 +11,7 @@ import ChestResp from "./pages/ChestResp";
 import Neuro from "./pages/Neuro";
 import Constitutional from "./pages/Constitutional";
 import EmptyPage from "./components/EmptyPage";
+import AbdoGI from "./pages/AbdoGI";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,6 @@ const tabs = [
   "ACLS",
   "Eye",
   "HEENT",
-  "Abdo/GI",
   "OB/GYN",
   "Genitourinary",
   "MSK",
@@ -43,6 +43,7 @@ const App = () => (
             <Route path="/chest-resp" element={<ChestResp />} />
             <Route path="/neuro" element={<Neuro />} />
             <Route path="/constitutional" element={<Constitutional />} />
+            <Route path="/gastrointestinal" element={<AbdoGI />} />
             {tabs.map((tab, index) => (
               <Route
                 key={index}

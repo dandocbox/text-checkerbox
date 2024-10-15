@@ -12,7 +12,7 @@ const tabs = [
   "Eye",
   "HEENT",
   "Chest/Resp",
-  "Abdo/GI",
+  "Gastrointestinal",
   "OB/GYN",
   "Genitourinary",
   "MSK",
