@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Column from '../components/Column';
 import NoteSection from '../components/NoteSection';
 
-const TraumaBurn = () => {
+const Trauma = () => {
   const [note, setNote] = useState('');
   const [checkboxStates, setCheckboxStates] = useState({});
 
@@ -26,6 +26,10 @@ const TraumaBurn = () => {
         {
           title: "General:",
           items: ["History General"]
+        },
+        {
+          title: "Laceration:",
+          items: ["History Laceration"]
         },
         {
           title: "Head Injury:",
@@ -64,21 +68,17 @@ const TraumaBurn = () => {
         {
           title: "Procedures:",
           items: [
-            "Procedure Chest Tube Surgical",
-            "Procedure Chest Tube Thoravent",
-            "Procedure Digital Block",
-            "Procedure Drainage",
-            "Procedure Echo",
-            "Procedure EFAST",
-            "Procedure Foreign Body Ear",
-            "Procedure General",
-            "Procedure Intubation",
             "Procedure Laceration",
             "Procedure Laceration Glue",
-            "Procedure Nasal Packing",
-            "Procedure Ortho Reduction",
+            "Procedure Chest Tube Surgical",
+            "Procedure Chest Tube Thoravent",
             "Procedure Sedation",
+            "Procedure Digital Block",
+            "Procedure Ortho Reduction",
             "Procedure Splint",
+            "Procedure Echo",
+            "Procedure EFAST",
+            "Procedure Intubation",
             "Procedure Suture Removal"
           ]
         }
@@ -91,6 +91,7 @@ const TraumaBurn = () => {
           title: "MDM:",
           items: [
             "MDM General",
+            "MDM Laceration",
             "MDM Trauma MSK",
             "MDM Trauma Head",
             "MDM MVC Minor",
@@ -103,6 +104,7 @@ const TraumaBurn = () => {
           title: "Discharge:",
           items: [
             "Discharge General",
+            "Discharge Laceration",
             "Discharge Trauma MSK",
             "Discharge Trauma Head",
             "Discharge Trauma Head CT",
@@ -175,4 +177,4 @@ const TraumaBurn = () => {
   );
 };
 
-export default TraumaBurn;
+export default Trauma;
