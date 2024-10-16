@@ -18,7 +18,7 @@ const tabs = [
   "MSK",
   "Skin",
   "Allergy",
-  "Psych / ETOH / Drug",
+  "Psych",
   "Wilderness Med",
   "Misc"
 ];
