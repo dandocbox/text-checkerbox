@@ -11,7 +11,7 @@ const tabs = [
   "Neuro",
   "Eye",
   "HEENT",
-  "Chest/Resp",
+  "Cardiothoracic",
   "Gastrointestinal",
   "OB/GYN",
   "Genitourinary",
