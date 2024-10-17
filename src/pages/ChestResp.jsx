@@ -28,12 +28,8 @@ const ChestResp = () => {
           items: [
             "History General",
             "History Chest Pain",
-            "History Shortness of Breath",
-            "History Asthma",
-            "History COPD",
-            "History CHF",
-            "History Cough",
-            "History URI"
+            "History Chest Wall Pain",
+            "History Palpitations"
           ]
         }
       ]
@@ -69,12 +65,11 @@ const ChestResp = () => {
           items: [
             "MDM General",
             "MDM Chest Pain",
-            "MDM Shortness of Breath",
-            "MDM Asthma",
-            "MDM COPD",
-            "MDM CHF",
-            "MDM Cough",
-            "MDM URI"
+            "MDM Chest Pain Well",
+            "MDM Chest Wall Pain",
+            "MDM Palpitations",
+            "MDM Afib",
+            "MDM SVT"
           ]
         },
         {
@@ -84,13 +79,8 @@ const ChestResp = () => {
             "Discharge Chest Pain",
             "Discharge Chest Pain Dimer",
             "Discharge Chest Pain CT",
-            "Discharge Asthma",
-            "Discharge COPD",
-            "Discharge CHF",
-            "Discharge Cough",
-            "Discharge URI",
-            "Discharge Bronchitis",
-            "Discharge Pneumonia"
+            "Discharge Chest Wall Pain",
+            "Discharge Afib"
           ]
         },
         {
@@ -99,12 +89,11 @@ const ChestResp = () => {
             "Admit General",
             "Admit Chest Pain",
             "Admit PE",
-            "Admit Asthma",
-            "Admit COPD",
-            "Admit CHF",
             "Admit Pneumonia",
             "Admit Pneumonia CAP",
-            "Admit Pneumonia HAP"
+            "Admit Pneumonia HAP",
+            "Admit Afib",
+            "Admit SVT"
           ]
         }
       ]
