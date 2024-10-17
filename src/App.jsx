@@ -12,6 +12,7 @@ import Neuro from "./pages/Neuro";
 import Constitutional from "./pages/Constitutional";
 import EmptyPage from "./components/EmptyPage";
 import AbdoGI from "./pages/AbdoGI";
+import Respiratory from "./pages/Respiratory";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +41,8 @@ const App = () => (
             <Route path="/trauma" element={<Trauma />} />
             <Route path="/id" element={<ID />} />
             <Route path="/psych" element={<Psych />} />
-            <Route path="/chest-resp" element={<ChestResp />} />
+            <Route path="/cardiothoracic" element={<ChestResp />} />
+            <Route path="/respiratory" element={<Respiratory />} />
             <Route path="/neuro" element={<Neuro />} />
             <Route path="/constitutional" element={<Constitutional />} />
             <Route path="/gastrointestinal" element={<AbdoGI />} />
