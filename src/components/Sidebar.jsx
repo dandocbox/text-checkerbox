@@ -12,6 +12,7 @@ const tabs = [
   "Eye",
   "HEENT",
   "Cardiothoracic",
+  "Respiratory",
   "Gastrointestinal",
   "OB/GYN",
   "Genitourinary",
