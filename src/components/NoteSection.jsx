@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 const NoteSection = ({ note, setNote, onClear }) => {
   const handleClear = () => {
     setNote('');
-    onClear(); // This will be used to clear checkboxes in parent components
+    onClear();
   };
 
   const handleCopy = () => {
@@ -16,10 +16,10 @@ const NoteSection = ({ note, setNote, onClear }) => {
   };
 
   return (
-    <div className="w-96 bg-gray-900 p-4 rounded-lg">
-      <h2 className="text-2xl font-bold mb-4 text-emerald-400">NOTE:</h2>
+    <div className="w-96 bg-white shadow-sm p-4 rounded">
+      <h2 className="text-2xl font-bold mb-4 text-blue-600">NOTE:</h2>
       <textarea
-        className="w-full h-96 bg-gray-800 text-white p-2 rounded-lg mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-emerald-400"
+        className="w-full h-96 bg-gray-50 text-gray-700 p-2 rounded mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200"
         value={note}
         onChange={handleChange}
       />
@@ -27,13 +27,13 @@ const NoteSection = ({ note, setNote, onClear }) => {
         <Button
           variant="outline"
           onClick={handleClear}
-          className="bg-white text-black hover:bg-gray-200 font-semibold px-4 py-2 rounded h-10"
+          className="bg-white text-gray-700 hover:bg-gray-100 font-semibold px-4 py-2 rounded h-10 border border-gray-200"
         >
           Clear
         </Button>
         <Button
           onClick={handleCopy}
-          className="bg-emerald-400 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded flex-grow ml-2 h-10"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded flex-grow ml-2 h-10"
         >
           Copy Text
         </Button>
